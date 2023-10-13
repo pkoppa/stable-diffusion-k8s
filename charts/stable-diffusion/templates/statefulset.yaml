@@ -41,6 +41,8 @@ spec:
       initContainers:
         - name: ensure-stable-models
           image: busybox:1.35
+          securityContext:
+            runAsUser: 0
           command: ["/bin/sh"]
           args:
             - -c
